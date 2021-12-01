@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radioButton" id="radio1">
+            <input type="radio" name="radioButton" id="radio2">
+            <input type="radio" name="radioButton" id="radio3">
+            <input type="radio" name="radioButton" id="radio4">
+            <div class="slide first">
+                <img src="./img/brazil1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./img/brazil2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./img/brazil3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./img/brazil4.jpg" alt="">
+            </div>
+            <div class="navigation-auto">
+                <div class="autoButton1"></div>
+                <div class="autoButton2"></div>
+                <div class="autoButton3"></div>
+                <div class="autoButton4"></div>
+            </div>
+
+        </div>
+
+        <div class="navigation-manual">
+            <label for="radio1" class="manualButton"></label>
+            <label for="radio2" class="manualButton"></label>
+            <label for="radio3" class="manualButton"></label>
+            <label for="radio4" class="manualButton"></label>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+    </script>
+
+</body>
+
+</html>
